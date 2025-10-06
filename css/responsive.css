@@ -1,0 +1,660 @@
+/* ===== RESPONSIVE DESIGN ===== */
+
+/* Large Desktop (1440px+) */
+@media (min-width: 1440px) {
+  .container {
+    max-width: 1400px;
+  }
+  
+  .hero__title {
+    font-size: var(--font-size-6xl);
+  }
+  
+  .section__title {
+    font-size: var(--font-size-4xl);
+  }
+}
+
+/* Desktop (1024px - 1439px) */
+@media (max-width: 1439px) {
+  .hero__content {
+    gap: var(--spacing-12);
+  }
+  
+  .mission__content,
+  .contact__content,
+  .newsletter__content {
+    gap: var(--spacing-12);
+  }
+}
+
+/* Tablet (768px - 1023px) */
+@media (max-width: 1023px) {
+  :root {
+    --header-height: 70px;
+  }
+  
+  .container {
+    padding: 0 var(--spacing-6);
+  }
+  
+  /* Navigation */
+  .nav__menu {
+    position: fixed;
+    top: var(--header-height);
+    left: 0;
+    width: 100%;
+    height: calc(100vh - var(--header-height));
+    background-color: var(--white);
+    border-top: 1px solid var(--gray-200);
+    flex-direction: column;
+    justify-content: flex-start;
+    padding: var(--spacing-8);
+    transform: translateX(-100%);
+    transition: transform var(--transition-normal);
+    z-index: var(--z-modal);
+  }
+  
+  .nav__menu.active {
+    transform: translateX(0);
+  }
+  
+  .nav__list {
+    flex-direction: column;
+    gap: var(--spacing-4);
+    width: 100%;
+    margin-bottom: var(--spacing-8);
+  }
+  
+  .nav__link {
+    padding: var(--spacing-4);
+    width: 100%;
+    text-align: center;
+    border-radius: var(--radius-lg);
+  }
+  
+  .nav__actions {
+    flex-direction: column;
+    width: 100%;
+    gap: var(--spacing-4);
+  }
+  
+  .nav__actions .btn {
+    width: 100%;
+  }
+  
+  .nav__toggle {
+    display: flex;
+  }
+  
+  .nav__toggle.active span:nth-child(1) {
+    transform: rotate(45deg) translate(5px, 5px);
+  }
+  
+  .nav__toggle.active span:nth-child(2) {
+    opacity: 0;
+  }
+  
+  .nav__toggle.active span:nth-child(3) {
+    transform: rotate(-45deg) translate(7px, -6px);
+  }
+  
+  /* Hero Section */
+  .hero {
+    padding: var(--spacing-20) 0;
+  }
+  
+  .hero__content {
+    grid-template-columns: 1fr;
+    gap: var(--spacing-12);
+    text-align: center;
+  }
+  
+  .hero__title {
+    font-size: var(--font-size-4xl);
+  }
+  
+  .hero__actions {
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .hero__stats {
+    justify-content: center;
+    gap: var(--spacing-6);
+  }
+  
+  /* Sections */
+  section {
+    padding: var(--spacing-16) 0;
+  }
+  
+  .section__header {
+    margin-bottom: var(--spacing-12);
+  }
+  
+  .section__title {
+    font-size: var(--font-size-3xl);
+  }
+  
+  /* About Grid */
+  .about__grid {
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: var(--spacing-6);
+  }
+  
+  /* Steps */
+  .step {
+    grid-template-columns: 1fr;
+    text-align: center;
+    gap: var(--spacing-6);
+  }
+  
+  .step:nth-child(even) .step__visual {
+    order: 0;
+  }
+  
+  /* Testimonials */
+  .testimonials {
+    grid-template-columns: 1fr;
+    gap: var(--spacing-6);
+  }
+  
+  /* CTA Actions */
+  .cta__actions {
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  /* Mission Content */
+  .mission__content {
+    grid-template-columns: 1fr;
+    gap: var(--spacing-12);
+    text-align: center;
+  }
+  
+  .mission__stats {
+    grid-template-columns: repeat(3, 1fr);
+    gap: var(--spacing-3);
+  }
+  
+  /* Values Grid */
+  .values__grid {
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: var(--spacing-6);
+  }
+  
+  /* Team Grid */
+  .team__grid {
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: var(--spacing-6);
+  }
+  
+  /* Contact Content */
+  .contact__content {
+    grid-template-columns: 1fr;
+    gap: var(--spacing-12);
+  }
+  
+  /* Newsletter Content */
+  .newsletter__content {
+    grid-template-columns: 1fr;
+    gap: var(--spacing-8);
+    text-align: center;
+  }
+  
+  .newsletter__form {
+    max-width: 100%;
+  }
+  
+  /* Footer */
+  .footer__content {
+    grid-template-columns: 1fr;
+    gap: var(--spacing-12);
+    text-align: center;
+  }
+  
+  .footer__links {
+    grid-template-columns: repeat(3, 1fr);
+    gap: var(--spacing-6);
+  }
+  
+  .footer__bottom {
+    flex-direction: column;
+    gap: var(--spacing-4);
+    text-align: center;
+  }
+}
+
+/* Mobile Large (480px - 767px) */
+@media (max-width: 767px) {
+  :root {
+    --header-height: 60px;
+    --font-size-5xl: 2.5rem;
+    --font-size-4xl: 2rem;
+    --font-size-3xl: 1.75rem;
+  }
+  
+  .container {
+    padding: 0 var(--spacing-4);
+  }
+  
+  /* Hero */
+  .hero {
+    padding: var(--spacing-16) 0;
+  }
+  
+  .hero__title {
+    font-size: var(--font-size-3xl);
+  }
+  
+  .hero__description {
+    font-size: var(--font-size-base);
+  }
+  
+  .hero__actions {
+    gap: var(--spacing-3);
+  }
+  
+  .hero__stats {
+    flex-direction: column;
+    gap: var(--spacing-4);
+  }
+  
+  /* Sections */
+  section {
+    padding: var(--spacing-12) 0;
+  }
+  
+  .section__header {
+    margin-bottom: var(--spacing-10);
+  }
+  
+  .section__title {
+    font-size: var(--font-size-2xl);
+  }
+  
+  .section__subtitle {
+    font-size: var(--font-size-base);
+  }
+  
+  /* About Grid */
+  .about__grid {
+    grid-template-columns: 1fr;
+    gap: var(--spacing-6);
+  }
+  
+  /* Steps */
+  .steps {
+    gap: var(--spacing-8);
+  }
+  
+  .step {
+    padding: var(--spacing-6);
+  }
+  
+  .step__title {
+    font-size: var(--font-size-xl);
+  }
+  
+  .step__description {
+    font-size: var(--font-size-base);
+  }
+  
+  /* Values Grid */
+  .values__grid {
+    grid-template-columns: 1fr;
+    gap: var(--spacing-6);
+  }
+  
+  /* Team Grid */
+  .team__grid {
+    grid-template-columns: 1fr;
+    gap: var(--spacing-6);
+  }
+  
+  /* Mission Stats */
+  .mission__stats {
+    grid-template-columns: 1fr;
+    gap: var(--spacing-4);
+  }
+  
+  /* Newsletter Input Group */
+  .newsletter__input-group {
+    flex-direction: column;
+    gap: var(--spacing-3);
+  }
+  
+  /* Footer Links */
+  .footer__links {
+    grid-template-columns: 1fr;
+    gap: var(--spacing-8);
+    text-align: center;
+  }
+  
+  /* CTA */
+  .cta__title {
+    font-size: var(--font-size-3xl);
+  }
+  
+  .cta__description {
+    font-size: var(--font-size-base);
+  }
+  
+  /* Page Hero */
+  .page-hero {
+    padding: var(--spacing-16) 0 var(--spacing-12);
+  }
+  
+  .page-hero__title {
+    font-size: var(--font-size-3xl);
+  }
+  
+  .page-hero__description {
+    font-size: var(--font-size-base);
+  }
+}
+
+/* Mobile Small (320px - 479px) */
+@media (max-width: 479px) {
+  :root {
+    --spacing-20: 3rem;
+    --spacing-16: 2.5rem;
+    --spacing-12: 2rem;
+  }
+  
+  .container {
+    padding: 0 var(--spacing-3);
+  }
+  
+  /* Typography */
+  .hero__title {
+    font-size: var(--font-size-2xl);
+  }
+  
+  .section__title {
+    font-size: var(--font-size-xl);
+  }
+  
+  .cta__title {
+    font-size: var(--font-size-2xl);
+  }
+  
+  .page-hero__title {
+    font-size: var(--font-size-2xl);
+  }
+  
+  /* Buttons */
+  .btn--large {
+    padding: var(--spacing-3) var(--spacing-6);
+    font-size: var(--font-size-base);
+  }
+  
+  .hero__actions {
+    gap: var(--spacing-2);
+  }
+  
+  .cta__actions {
+    gap: var(--spacing-3);
+  }
+  
+  /* Cards and Components */
+  .about__item,
+  .value-card,
+  .team-member {
+    padding: var(--spacing-5);
+  }
+  
+  .testimonial {
+    padding: var(--spacing-5);
+  }
+  
+  .step {
+    padding: var(--spacing-5);
+  }
+  
+  .contact__form {
+    padding: var(--spacing-6);
+  }
+  
+  /* Form Rows */
+  .form__row {
+    grid-template-columns: 1fr;
+    gap: var(--spacing-4);
+  }
+  
+  /* Stats */
+  .stat__number {
+    font-size: var(--font-size-xl);
+  }
+  
+  .stat-card__number {
+    font-size: var(--font-size-2xl);
+  }
+  
+  /* Step Numbers and Visuals */
+  .step__number {
+    width: 50px;
+    height: 50px;
+    font-size: var(--font-size-lg);
+  }
+  
+  .step__visual {
+    width: 100px;
+    height: 100px;
+  }
+  
+  .step__icon {
+    font-size: var(--font-size-3xl);
+  }
+  
+  /* Team Member Images */
+  .team-member__image {
+    width: 70px;
+    height: 70px;
+    font-size: var(--font-size-lg);
+  }
+  
+  /* Contact Methods */
+  .contact__method-icon {
+    width: 45px;
+    height: 45px;
+    font-size: var(--font-size-lg);
+  }
+}
+
+/* ===== AUTH PAGE RESPONSIVE ===== */
+.auth-page .main {
+  padding-top: var(--header-height);
+}
+
+.auth-main {
+  min-height: calc(100vh - var(--header-height));
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+
+.auth-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: var(--spacing-8);
+  background-color: var(--white);
+}
+
+.auth-form {
+  width: 100%;
+  max-width: 400px;
+}
+
+.auth-form__header {
+  text-align: center;
+  margin-bottom: var(--spacing-8);
+}
+
+.auth-form__title {
+  font-size: var(--font-size-2xl);
+  font-weight: var(--font-weight-bold);
+  color: var(--gray-900);
+  margin-bottom: var(--spacing-3);
+}
+
+.auth-form__subtitle {
+  color: var(--gray-600);
+  line-height: var(--line-height-relaxed);
+}
+
+.auth-form__footer {
+  margin-top: var(--spacing-8);
+  text-align: center;
+}
+
+.auth-form__switch {
+  color: var(--gray-600);
+  margin-bottom: var(--spacing-6);
+}
+
+.auth-form__guest {
+  padding-top: var(--spacing-6);
+  border-top: 1px solid var(--gray-200);
+}
+
+.auth-visual {
+  background: linear-gradient(135deg, var(--primary-color), var(--primary-light));
+  color: var(--white);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: var(--spacing-8);
+  position: relative;
+  overflow: hidden;
+}
+
+.auth-visual::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: radial-gradient(circle at 30% 20%, rgba(255, 255, 255, 0.1) 0%, transparent 50%),
+              radial-gradient(circle at 70% 80%, rgba(255, 255, 255, 0.1) 0%, transparent 50%);
+  pointer-events: none;
+}
+
+.auth-visual__content {
+  max-width: 400px;
+  text-align: center;
+  position: relative;
+  z-index: 1;
+}
+
+.auth-visual__title {
+  font-size: var(--font-size-3xl);
+  font-weight: var(--font-weight-bold);
+  color: var(--white);
+  margin-bottom: var(--spacing-6);
+}
+
+.auth-visual__description {
+  font-size: var(--font-size-lg);
+  color: rgba(255, 255, 255, 0.9);
+  line-height: var(--line-height-relaxed);
+  margin-bottom: var(--spacing-8);
+}
+
+.auth-visual__features {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-4);
+}
+
+.feature {
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-3);
+}
+
+.feature__icon {
+  font-size: var(--font-size-lg);
+}
+
+.feature__text {
+  color: rgba(255, 255, 255, 0.9);
+  font-weight: var(--font-weight-medium);
+}
+
+.guest-info {
+  margin-bottom: var(--spacing-8);
+}
+
+.guest-info__item {
+  display: flex;
+  gap: var(--spacing-4);
+  margin-bottom: var(--spacing-6);
+}
+
+.guest-info__icon {
+  font-size: var(--font-size-xl);
+  flex-shrink: 0;
+}
+
+.guest-info__text h3 {
+  font-size: var(--font-size-base);
+  font-weight: var(--font-weight-semibold);
+  color: var(--gray-900);
+  margin-bottom: var(--spacing-1);
+}
+
+.guest-info__text p {
+  color: var(--gray-600);
+  font-size: var(--font-size-sm);
+  margin: 0;
+}
+
+/* Auth Page Responsive */
+@media (max-width: 1023px) {
+  .auth-main {
+    grid-template-columns: 1fr;
+  }
+  
+  .auth-visual {
+    display: none;
+  }
+  
+  .auth-container {
+    min-height: calc(100vh - var(--header-height));
+  }
+}
+
+@media (max-width: 767px) {
+  .auth-container {
+    padding: var(--spacing-6) var(--spacing-4);
+  }
+  
+  .auth-form {
+    max-width: 100%;
+  }
+  
+  .auth-form__title {
+    font-size: var(--font-size-xl);
+  }
+}
+
+@media (max-width: 479px) {
+  .auth-container {
+    padding: var(--spacing-4);
+  }
+  
+  .auth-form__header {
+    margin-bottom: var(--spacing-6);
+  }
+  
+  .auth-form__title {
+    font-size: var(--font-size-lg);
+  }
+  
+  .btn--google {
+    font-size: var(--font-size-sm);
+  }
+}

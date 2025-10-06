@@ -3,380 +3,529 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Booksy - Crie e gerencie suas salas de reservas de forma simples e eficiente">
-    <meta name="keywords" content="reservas, agendamento, salas, booksy, gestão">
-    <title>Booksy - Crie sua sala de reservas</title>
+    <title>Booksy - Transforme leitura em conexão</title>
+    <meta name="description" content="A rede social onde cada livro tem sua própria sala. Conecte-se com leitores, discuta ideias e agende encontros literários.">
     
-    <!-- Preconnect for performance -->
+    <!-- Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    
-    <!-- Google Fonts -->
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     
-    <!-- CSS Files -->
+    <!-- CSS -->
     <link rel="stylesheet" href="css/main.css">
     <link rel="stylesheet" href="css/components.css">
     <link rel="stylesheet" href="css/responsive.css">
     
     <!-- Favicon -->
-    <link rel="icon" type="image/x-icon" href="assets/favicon.ico">
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>📚</text></svg>">
 </head>
 <body>
-    <!-- Header Navigation -->
-    <header class="header" id="header">
-        <nav class="nav container">
-            <div class="nav__brand">
-                <a href="#home" class="nav__logo">
-                    <span class="nav__logo-icon">📚</span>
-                    <span class="nav__logo-text">Booksy</span>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-brand">
+                <a href="#home" class="brand-link">
+                    <span class="brand-icon">📚</span>
+                    <span class="brand-text">Booksy</span>
                 </a>
             </div>
             
-            <div class="nav__menu" id="nav-menu">
-                <ul class="nav__list">
-                    <li class="nav__item">
-                        <a href="#home" class="nav__link active">Início</a>
-                    </li>
-                    <li class="nav__item">
-                        <a href="#about" class="nav__link">Sobre</a>
-                    </li>
-                    <li class="nav__item">
-                        <a href="#how-it-works" class="nav__link">Como Funciona</a>
-                    </li>
-                    <li class="nav__item">
-                        <a href="#community" class="nav__link">Comunidade</a>
-                    </li>
-                    <li class="nav__item">
-                        <a href="about.html" class="nav__link">Missão</a>
-                    </li>
-                </ul>
+            <div class="nav-menu" id="nav-menu">
+                <a href="#home" class="nav-link">Início</a>
+                <a href="#problema" class="nav-link">O Problema</a>
+                <a href="#solucao" class="nav-link">A Solução</a>
+                <a href="#como-funciona" class="nav-link">Como Funciona</a>
+                <a href="#comunidade" class="nav-link">Comunidade</a>
+                <a href="about.html" class="nav-link">Missão</a>
+            </div>
+            
+            <div class="nav-actions">
+                <a href="login.html" class="btn btn-outline">Entrar</a>
+                <a href="login.html" class="btn btn-primary">Começar</a>
+            </div>
+            
+            <div class="nav-toggle" id="nav-toggle">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <div class="hero-container">
+            <div class="hero-content">
+                <div class="hero-badge">
+                    <span class="badge-icon">🌟</span>
+                    <span>A primeira rede social literária do Brasil</span>
+                </div>
                 
-                <div class="nav__actions">
-                    <a href="login.html" class="btn btn--outline">Entrar</a>
-                    <a href="login.html#signup" class="btn btn--primary">Cadastrar</a>
+                <h1 class="hero-title">
+                    Transforme <span class="highlight">leitura</span> em <span class="highlight">conexão</span>
+                </h1>
+                
+                <p class="hero-description">
+                    No Booksy, cada livro tem sua própria sala onde leitores se encontram, 
+                    discutem ideias e agendam encontros. Porque ler junto é melhor que ler sozinho.
+                </p>
+                
+                <div class="hero-actions">
+                    <a href="#solucao" class="btn btn-primary btn-large">
+                        <span>Criar minha primeira sala</span>
+                        <span class="btn-icon">→</span>
+                    </a>
+                    <a href="#como-funciona" class="btn btn-outline btn-large">
+                        <span class="btn-icon">▶</span>
+                        <span>Ver como funciona</span>
+                    </a>
+                </div>
+                
+                <div class="hero-stats">
+                    <div class="stat">
+                        <div class="stat-number">2B+</div>
+                        <div class="stat-label">Leitores no mundo</div>
+                    </div>
+                    <div class="stat">
+                        <div class="stat-number">500+</div>
+                        <div class="stat-label">Salas criadas</div>
+                    </div>
+                    <div class="stat">
+                        <div class="stat-number">95%</div>
+                        <div class="stat-label">Terminam os livros</div>
+                    </div>
                 </div>
             </div>
             
-            <div class="nav__toggle" id="nav-toggle">
-                <span></span>
-                <span></span>
-                <span></span>
-            </div>
-        </nav>
-    </header>
-
-    <!-- Main Content -->
-    <main class="main">
-        <!-- Hero Section -->
-        <section class="hero" id="home">
-            <div class="hero__container container">
-                <div class="hero__content">
-                    <div class="hero__text">
-                        <h1 class="hero__title">
-                            Crie sua sala de reservas
-                            <span class="hero__title-highlight">em minutos</span>
-                        </h1>
-                        <p class="hero__description">
-                            Simplifique o agendamento de seus serviços com o Booksy. 
-                            Uma plataforma intuitiva para gerenciar reservas, 
-                            horários e clientes de forma eficiente.
-                        </p>
-                        <div class="hero__actions">
-                            <a href="login.html#signup" class="btn btn--primary btn--large">
-                                Crie sua sala no Booksy
-                                <span class="btn__icon">→</span>
-                            </a>
-                            <a href="#how-it-works" class="btn btn--ghost btn--large">
-                                Ver como funciona
-                            </a>
-                        </div>
-                        <div class="hero__stats">
-                            <div class="stat">
-                                <span class="stat__number">1000+</span>
-                                <span class="stat__label">Salas criadas</span>
-                            </div>
-                            <div class="stat">
-                                <span class="stat__number">5000+</span>
-                                <span class="stat__label">Reservas realizadas</span>
-                            </div>
-                            <div class="stat">
-                                <span class="stat__number">98%</span>
-                                <span class="stat__label">Satisfação</span>
+            <div class="hero-visual">
+                <div class="book-rooms-preview">
+                    <div class="book-room active">
+                        <div class="book-cover">📖</div>
+                        <div class="room-info">
+                            <h3>Dom Casmurro</h3>
+                            <p>12 leitores • 3 discussões ativas</p>
+                            <div class="room-activity">
+                                <span class="activity-dot"></span>
+                                <span>Discussão sobre Cap. 5 agora</span>
                             </div>
                         </div>
                     </div>
-                    <div class="hero__visual">
-                        <div class="hero__image">
-                            <div class="hero__mockup">
-                                <!-- Placeholder for hero image/mockup -->
-                                <div class="mockup__screen">
-                                    <div class="mockup__content">
-                                        <div class="mockup__header"></div>
-                                        <div class="mockup__body">
-                                            <div class="mockup__card"></div>
-                                            <div class="mockup__card"></div>
-                                            <div class="mockup__card"></div>
+                    
+                    <div class="book-room">
+                        <div class="book-cover">🏰</div>
+                        <div class="room-info">
+                            <h3>1984</h3>
+                            <p>28 leitores • Encontro hoje 20h</p>
+                            <div class="room-members">
+                                <div class="member-avatar">A</div>
+                                <div class="member-avatar">B</div>
+                                <div class="member-avatar">C</div>
+                                <div class="member-count">+25</div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="book-room">
+                        <div class="book-cover">🌟</div>
+                        <div class="room-info">
+                            <h3>O Pequeno Príncipe</h3>
+                            <p>45 leitores • 8 encontros realizados</p>
+                            <div class="room-tags">
+                                <span class="tag">Filosofia</span>
+                                <span class="tag">Infantil</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Problem Section -->
+    <section id="problema" class="problem-section">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">O Problema que Todo Leitor Conhece</h2>
+                <p class="section-description">
+                    Ler é uma atividade solitária — mas as melhores conversas nascem dos livros
+                </p>
+            </div>
+            
+            <div class="problem-grid">
+                <div class="problem-card">
+                    <div class="problem-icon">😔</div>
+                    <h3>Leitura Solitária</h3>
+                    <p>Milhões de leitores começam uma leitura, mas abandonam no meio por falta de companhia e motivação.</p>
+                </div>
+                
+                <div class="problem-card">
+                    <div class="problem-icon">📍</div>
+                    <h3>Clubes Limitados</h3>
+                    <p>Os clubes do livro físicos são difíceis de organizar e limitados por tempo e lugar.</p>
+                </div>
+                
+                <div class="problem-card">
+                    <div class="problem-icon">💬</div>
+                    <h3>Falta de Discussão</h3>
+                    <p>Não há um espaço digital que traga a magia das discussões literárias para o mundo online.</p>
+                </div>
+                
+                <div class="problem-card">
+                    <div class="problem-icon">🔍</div>
+                    <h3>Descoberta Difícil</h3>
+                    <p>É difícil encontrar outros leitores com interesses similares e formar comunidades literárias.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Solution Section -->
+    <section id="solucao" class="solution-section">
+        <div class="container">
+            <div class="solution-content">
+                <div class="solution-text">
+                    <div class="section-badge">
+                        <span class="badge-icon">💡</span>
+                        <span>A Solução</span>
+                    </div>
+                    
+                    <h2 class="section-title">
+                        Cada livro tem sua própria <span class="highlight">sala</span>
+                    </h2>
+                    
+                    <p class="section-description">
+                        Booksy é uma rede social onde cada livro vira uma comunidade. 
+                        Leitores se encontram, discutem ideias e agendam encontros online. 
+                        Transformamos leitura em conexão.
+                    </p>
+                    
+                    <div class="solution-features">
+                        <div class="feature">
+                            <div class="feature-icon">🏠</div>
+                            <div class="feature-content">
+                                <h4>Salas por Livro</h4>
+                                <p>Cada livro tem sua própria sala — um clube para cada história</p>
+                            </div>
+                        </div>
+                        
+                        <div class="feature">
+                            <div class="feature-icon">💭</div>
+                            <div class="feature-content">
+                                <h4>Fóruns Organizados</h4>
+                                <p>Conversas mais ricas e permanentes que chats simples</p>
+                            </div>
+                        </div>
+                        
+                        <div class="feature">
+                            <div class="feature-icon">📅</div>
+                            <div class="feature-content">
+                                <h4>Encontros Integrados</h4>
+                                <p>Agendamento fácil para videochamadas e discussões ao vivo</p>
+                            </div>
+                        </div>
+                        
+                        <div class="feature">
+                            <div class="feature-icon">👤</div>
+                            <div class="feature-content">
+                                <h4>Perfil de Leitor</h4>
+                                <p>Veja seus clubes, postagens e próximos encontros</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="solution-cta">
+                        <a href="login.html" class="btn btn-primary btn-large">
+                            <span>Criar minha primeira sala</span>
+                            <span class="btn-icon">→</span>
+                        </a>
+                    </div>
+                </div>
+                
+                <div class="solution-visual">
+                    <div class="room-interface-preview">
+                        <div class="interface-header">
+                            <div class="book-info">
+                                <div class="book-cover-small">📚</div>
+                                <div>
+                                    <h3>Cem Anos de Solidão</h3>
+                                    <p>Gabriel García Márquez</p>
+                                </div>
+                            </div>
+                            <div class="room-stats">
+                                <span>34 leitores</span>
+                                <span>•</span>
+                                <span>5 discussões ativas</span>
+                            </div>
+                        </div>
+                        
+                        <div class="interface-tabs">
+                            <div class="tab active">Discussões</div>
+                            <div class="tab">Encontros</div>
+                            <div class="tab">Progresso</div>
+                        </div>
+                        
+                        <div class="interface-content">
+                            <div class="discussion-thread">
+                                <div class="thread-header">
+                                    <h4>💭 O que acharam do realismo mágico no Cap. 3?</h4>
+                                    <span class="thread-meta">12 respostas • há 2h</span>
+                                </div>
+                                <div class="thread-preview">
+                                    <div class="comment">
+                                        <div class="comment-avatar">M</div>
+                                        <div class="comment-content">
+                                            <strong>Maria:</strong> A forma como García Márquez mistura realidade e fantasia é incrível...
                                         </div>
                                     </div>
                                 </div>
                             </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- About Section -->
-        <section class="about" id="about">
-            <div class="container">
-                <div class="section__header">
-                    <h2 class="section__title">Sobre o Booksy</h2>
-                    <p class="section__subtitle">
-                        Uma plataforma moderna para revolucionar a forma como você gerencia reservas
-                    </p>
-                </div>
-                
-                <div class="about__content">
-                    <div class="about__grid">
-                        <div class="about__item">
-                            <div class="about__icon">⚡</div>
-                            <h3 class="about__item-title">Rápido e Simples</h3>
-                            <p class="about__item-description">
-                                Configure sua sala de reservas em poucos cliques. 
-                                Interface intuitiva que qualquer pessoa pode usar.
-                            </p>
-                        </div>
-                        
-                        <div class="about__item">
-                            <div class="about__icon">🔒</div>
-                            <h3 class="about__item-title">Seguro e Confiável</h3>
-                            <p class="about__item-description">
-                                Seus dados e de seus clientes estão protegidos com 
-                                as melhores práticas de segurança.
-                            </p>
-                        </div>
-                        
-                        <div class="about__item">
-                            <div class="about__icon">📱</div>
-                            <h3 class="about__item-title">Multiplataforma</h3>
-                            <p class="about__item-description">
-                                Acesse de qualquer dispositivo. Responsivo e 
-                                otimizado para desktop, tablet e mobile.
-                            </p>
-                        </div>
-                        
-                        <div class="about__item">
-                            <div class="about__icon">🎯</div>
-                            <h3 class="about__item-title">Focado em Resultados</h3>
-                            <p class="about__item-description">
-                                Ferramentas que realmente ajudam a aumentar 
-                                sua produtividade e satisfação dos clientes.
-                            </p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- How It Works Section -->
-        <section class="how-it-works" id="how-it-works">
-            <div class="container">
-                <div class="section__header">
-                    <h2 class="section__title">Como Funciona</h2>
-                    <p class="section__subtitle">
-                        Três passos simples para começar a usar o Booksy
-                    </p>
-                </div>
-                
-                <div class="steps">
-                    <div class="step">
-                        <div class="step__number">1</div>
-                        <div class="step__content">
-                            <h3 class="step__title">Crie sua conta</h3>
-                            <p class="step__description">
-                                Cadastre-se gratuitamente usando seu e-mail ou conta Google. 
-                                Processo rápido e sem complicações.
-                            </p>
-                        </div>
-                        <div class="step__visual">
-                            <div class="step__icon">👤</div>
-                        </div>
-                    </div>
-                    
-                    <div class="step">
-                        <div class="step__number">2</div>
-                        <div class="step__content">
-                            <h3 class="step__title">Configure sua sala</h3>
-                            <p class="step__description">
-                                Defina seus serviços, horários de funcionamento e 
-                                personalize sua sala de acordo com suas necessidades.
-                            </p>
-                        </div>
-                        <div class="step__visual">
-                            <div class="step__icon">⚙️</div>
-                        </div>
-                    </div>
-                    
-                    <div class="step">
-                        <div class="step__number">3</div>
-                        <div class="step__content">
-                            <h3 class="step__title">Comece a receber reservas</h3>
-                            <p class="step__description">
-                                Compartilhe o link da sua sala e comece a receber 
-                                reservas automaticamente. Simples assim!
-                            </p>
-                        </div>
-                        <div class="step__visual">
-                            <div class="step__icon">🎉</div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- Community Section -->
-        <section class="community" id="community">
-            <div class="container">
-                <div class="section__header">
-                    <h2 class="section__title">Nossa Comunidade</h2>
-                    <p class="section__subtitle">
-                        Veja o que nossos usuários estão dizendo sobre o Booksy
-                    </p>
-                </div>
-                
-                <div class="testimonials">
-                    <div class="testimonial">
-                        <div class="testimonial__content">
-                            <p class="testimonial__text">
-                                "O Booksy transformou completamente a forma como gerencio 
-                                meus agendamentos. Muito mais organizado e profissional!"
-                            </p>
-                        </div>
-                        <div class="testimonial__author">
-                            <div class="testimonial__avatar">M</div>
-                            <div class="testimonial__info">
-                                <h4 class="testimonial__name">Maria Silva</h4>
-                                <p class="testimonial__role">Esteticista</p>
-                            </div>
-                        </div>
-                    </div>
-                    
-                    <div class="testimonial">
-                        <div class="testimonial__content">
-                            <p class="testimonial__text">
-                                "Interface super intuitiva e funcionalidades que realmente 
-                                fazem diferença no dia a dia. Recomendo!"
-                            </p>
-                        </div>
-                        <div class="testimonial__author">
-                            <div class="testimonial__avatar">J</div>
-                            <div class="testimonial__info">
-                                <h4 class="testimonial__name">João Santos</h4>
-                                <p class="testimonial__role">Barbeiro</p>
-                            </div>
-                        </div>
-                    </div>
-                    
-                    <div class="testimonial">
-                        <div class="testimonial__content">
-                            <p class="testimonial__text">
-                                "Desde que comecei a usar o Booksy, meus clientes ficaram 
-                                muito mais satisfeitos com o processo de agendamento."
-                            </p>
-                        </div>
-                        <div class="testimonial__author">
-                            <div class="testimonial__avatar">A</div>
-                            <div class="testimonial__info">
-                                <h4 class="testimonial__name">Ana Costa</h4>
-                                <p class="testimonial__role">Consultora</p>
+                            
+                            <div class="upcoming-event">
+                                <div class="event-icon">📅</div>
+                                <div class="event-info">
+                                    <h4>Discussão ao vivo: Capítulos 4-6</h4>
+                                    <p>Hoje, 20:00 • 8 participantes confirmados</p>
+                                </div>
+                                <button class="btn btn-small btn-primary">Participar</button>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
-        </section>
+        </div>
+    </section>
 
-        <!-- CTA Section -->
-        <section class="cta">
-            <div class="container">
-                <div class="cta__content">
-                    <h2 class="cta__title">Pronto para começar?</h2>
-                    <p class="cta__description">
-                        Junte-se a milhares de profissionais que já estão usando o Booksy 
-                        para gerenciar suas reservas de forma mais eficiente.
-                    </p>
-                    <div class="cta__actions">
-                        <a href="login.html#signup" class="btn btn--primary btn--large">
-                            Criar conta gratuita
-                        </a>
-                        <a href="login.html" class="btn btn--outline btn--large">
-                            Já tenho conta
-                        </a>
-                    </div>
-                </div>
-            </div>
-        </section>
-    </main>
-
-    <!-- Footer -->
-    <footer class="footer">
+    <!-- How It Works Section -->
+    <section id="como-funciona" class="how-it-works-section">
         <div class="container">
-            <div class="footer__content">
-                <div class="footer__brand">
-                    <a href="#home" class="footer__logo">
-                        <span class="footer__logo-icon">📚</span>
-                        <span class="footer__logo-text">Booksy</span>
-                    </a>
-                    <p class="footer__description">
-                        Simplifique o agendamento de seus serviços com nossa plataforma intuitiva.
-                    </p>
+            <div class="section-header">
+                <h2 class="section-title">Como Funciona</h2>
+                <p class="section-description">
+                    Três passos simples para transformar sua leitura em uma experiência social
+                </p>
+            </div>
+            
+            <div class="steps-container">
+                <div class="step">
+                    <div class="step-number">1</div>
+                    <div class="step-content">
+                        <div class="step-icon">📖</div>
+                        <h3>Encontre ou Crie uma Sala</h3>
+                        <p>Procure pelo livro que está lendo ou crie uma nova sala. Cada livro tem sua própria comunidade de leitores.</p>
+                    </div>
                 </div>
                 
-                <div class="footer__links">
-                    <div class="footer__group">
-                        <h4 class="footer__group-title">Produto</h4>
-                        <ul class="footer__list">
-                            <li><a href="#about" class="footer__link">Sobre</a></li>
-                            <li><a href="#how-it-works" class="footer__link">Como Funciona</a></li>
-                            <li><a href="about.html" class="footer__link">Missão</a></li>
-                        </ul>
+                <div class="step-connector"></div>
+                
+                <div class="step">
+                    <div class="step-number">2</div>
+                    <div class="step-content">
+                        <div class="step-icon">💬</div>
+                        <h3>Participe das Discussões</h3>
+                        <p>Entre nos fóruns organizados por capítulo ou tema. Compartilhe suas impressões e descubra novas perspectivas.</p>
                     </div>
-                    
-                    <div class="footer__group">
-                        <h4 class="footer__group-title">Conta</h4>
-                        <ul class="footer__list">
-                            <li><a href="login.html" class="footer__link">Entrar</a></li>
-                            <li><a href="login.html#signup" class="footer__link">Cadastrar</a></li>
-                            <li><a href="login.html#guest" class="footer__link">Visitante</a></li>
-                        </ul>
+                </div>
+                
+                <div class="step-connector"></div>
+                
+                <div class="step">
+                    <div class="step-number">3</div>
+                    <div class="step-content">
+                        <div class="step-icon">🎥</div>
+                        <h3>Agende Encontros</h3>
+                        <p>Marque videochamadas com outros leitores para discussões ao vivo. Transforme leitura em conexão real.</p>
                     </div>
-                    
-                    <div class="footer__group">
-                        <h4 class="footer__group-title">Suporte</h4>
-                        <ul class="footer__list">
-                            <li><a href="about.html#contact" class="footer__link">Contato</a></li>
-                            <li><a href="#" class="footer__link">FAQ</a></li>
-                            <li><a href="#" class="footer__link">Ajuda</a></li>
-                        </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Community Section -->
+    <section id="comunidade" class="community-section">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Nossa Comunidade de Leitores</h2>
+                <p class="section-description">
+                    Veja o que nossos leitores estão dizendo sobre o Booksy
+                </p>
+            </div>
+            
+            <div class="testimonials-grid">
+                <div class="testimonial-card">
+                    <div class="testimonial-content">
+                        <p>"Finalmente encontrei um lugar onde posso discutir os livros que amo! As discussões no Booksy são muito mais ricas que qualquer rede social tradicional."</p>
+                    </div>
+                    <div class="testimonial-author">
+                        <div class="author-avatar">A</div>
+                        <div class="author-info">
+                            <h4>Ana Beatriz</h4>
+                            <p>Professora de Literatura • 47 livros lidos</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="testimonial-card">
+                    <div class="testimonial-content">
+                        <p>"Desde que entrei no Booksy, nunca mais abandonei um livro no meio. A motivação de discutir com outros leitores faz toda a diferença!"</p>
+                    </div>
+                    <div class="testimonial-author">
+                        <div class="author-avatar">C</div>
+                        <div class="author-info">
+                            <h4>Carlos Eduardo</h4>
+                            <p>Engenheiro • 23 livros lidos</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="testimonial-card">
+                    <div class="testimonial-content">
+                        <p>"Os encontros online são incríveis! É como ter um clube do livro personalizado para cada história que estou lendo."</p>
+                    </div>
+                    <div class="testimonial-author">
+                        <div class="author-avatar">M</div>
+                        <div class="author-info">
+                            <h4>Mariana Silva</h4>
+                            <p>Designer • 31 livros lidos</p>
+                        </div>
                     </div>
                 </div>
             </div>
             
-            <div class="footer__bottom">
-                <p class="footer__copyright">
-                    © 2024 Booksy. Todos os direitos reservados.
+            <div class="community-stats">
+                <div class="stat-card">
+                    <div class="stat-icon">📚</div>
+                    <div class="stat-number">500+</div>
+                    <div class="stat-label">Salas de livros ativas</div>
+                </div>
+                
+                <div class="stat-card">
+                    <div class="stat-icon">👥</div>
+                    <div class="stat-number">2.8K+</div>
+                    <div class="stat-label">Leitores conectados</div>
+                </div>
+                
+                <div class="stat-card">
+                    <div class="stat-icon">💬</div>
+                    <div class="stat-number">15K+</div>
+                    <div class="stat-label">Discussões criadas</div>
+                </div>
+                
+                <div class="stat-card">
+                    <div class="stat-icon">🎥</div>
+                    <div class="stat-number">1.2K+</div>
+                    <div class="stat-label">Encontros realizados</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="cta-section">
+        <div class="container">
+            <div class="cta-content">
+                <h2 class="cta-title">
+                    Pronto para transformar sua leitura em conexão?
+                </h2>
+                <p class="cta-description">
+                    Junte-se a milhares de leitores que já descobriram que ler junto é melhor que ler sozinho.
                 </p>
-                <div class="footer__social">
-                    <a href="#" class="footer__social-link">Twitter</a>
-                    <a href="#" class="footer__social-link">LinkedIn</a>
-                    <a href="#" class="footer__social-link">Instagram</a>
+                
+                <div class="cta-actions">
+                    <a href="login.html" class="btn btn-primary btn-large">
+                        <span>Criar minha primeira sala</span>
+                        <span class="btn-icon">→</span>
+                    </a>
+                    <a href="#como-funciona" class="btn btn-outline btn-large">
+                        <span>Saber mais</span>
+                    </a>
+                </div>
+                
+                <div class="cta-features">
+                    <div class="feature-item">
+                        <span class="feature-icon">✅</span>
+                        <span>Gratuito para começar</span>
+                    </div>
+                    <div class="feature-item">
+                        <span class="feature-icon">✅</span>
+                        <span>Sem limite de salas</span>
+                    </div>
+                    <div class="feature-item">
+                        <span class="feature-icon">✅</span>
+                        <span>Comunidade ativa</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-brand">
+                    <div class="brand-link">
+                        <span class="brand-icon">📚</span>
+                        <span class="brand-text">Booksy</span>
+                    </div>
+                    <p class="footer-description">
+                        A rede social onde cada livro tem sua própria sala. 
+                        Transformando leitura em conexão desde 2024.
+                    </p>
+                </div>
+                
+                <div class="footer-links">
+                    <div class="footer-column">
+                        <h4>Produto</h4>
+                        <a href="#como-funciona">Como Funciona</a>
+                        <a href="#comunidade">Comunidade</a>
+                        <a href="about.html">Sobre Nós</a>
+                    </div>
+                    
+                    <div class="footer-column">
+                        <h4>Suporte</h4>
+                        <a href="#ajuda">Central de Ajuda</a>
+                        <a href="#contato">Contato</a>
+                        <a href="#feedback">Feedback</a>
+                    </div>
+                    
+                    <div class="footer-column">
+                        <h4>Legal</h4>
+                        <a href="#privacidade">Privacidade</a>
+                        <a href="#termos">Termos de Uso</a>
+                        <a href="#cookies">Cookies</a>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <p>&copy; 2024 Booksy. Todos os direitos reservados.</p>
+                <div class="footer-social">
+                    <a href="#" class="social-link">Twitter</a>
+                    <a href="#" class="social-link">Instagram</a>
+                    <a href="#" class="social-link">LinkedIn</a>
                 </div>
             </div>
         </div>
     </footer>
 
-    <!-- JavaScript Files -->
+    <!-- Newsletter Modal -->
+    <div id="newsletter-modal" class="modal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h3>📚 Fique por dentro das novidades</h3>
+                <button class="modal-close" id="modal-close">&times;</button>
+            </div>
+            <div class="modal-body">
+                <p>Receba atualizações sobre novas funcionalidades, salas populares e dicas de leitura.</p>
+                <form class="newsletter-form" id="newsletter-form">
+                    <input type="email" placeholder="Seu melhor e-mail" required>
+                    <button type="submit" class="btn btn-primary">Inscrever-se</button>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <!-- Scripts -->
     <script src="js/main.js"></script>
     <script src="js/components.js"></script>
 </body>
